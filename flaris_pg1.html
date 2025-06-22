@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .header {
+            background-image: url(./flaris_pg1img/header.png);
+            height: max-content;
+            width: 100%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position-y: -260px;
+            padding-top: .1px;
+            border: solid black;
+            padding-bottom: 25px;
+        }
+
+        .navbar {
+            height: 100px;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.741);
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+        .logodiv {
+            height: 100%;
+            width: 180px;
+            margin-left: 100px;
+            display: inline-block;
+            vertical-align: top;
+
+        }
+
+        .logo {
+            width: 100%;
+            margin-top: 25px;
+
+        }
+
+        .nav {
+            width: 800px;
+            height: 100%;
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 170px;
+        }
+
+        .navlist {
+            width: max-content;
+            color: white;
+            list-style: none;
+            display: inline-block;
+            vertical-align: top;
+            border-bottom: solid transparent;
+            margin-left: 20px;
+            margin-top: 35px;
+            cursor: pointer;
+            transition-duration: .3s;
+            transition-property: all;
+            transition-timing-function: linear;
+            font-size: 15px;
+
+
+
+        }
+
+        .navlist:hover {
+            border-bottom: solid rgb(55, 180, 221);
+        }
+
+        .icondiv {
+            height: 30px;
+            width: max-content;
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 35px;
+            color: white;
+            margin-left: 80px;
+
+        }
+
+        #navicon {
+            margin-left: 10px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .flagdiv {
+            height: 30px;
+            width: 30px;
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 55px;
+            margin-top: 30px;
+
+        }
+
+        .h-h1 {
+            text-align: center;
+            margin-top: 100px;
+            color: white;
+            font-size: 40px;
+            font-weight: 100;
+            color: rgb(0, 170, 255);
+
+        }
+
+        .h-h2 {
+            text-align: center;
+            color: white;
+            font-weight: 100;
+            margin-top: 20px;
+            font-size: 35px;
+        }
+
+        .h-icondiv {
+            height: 40px;
+            width: 40px;
+            margin: auto;
+            margin-top: 465px;
+        }
+
+        #h-icon {
+            font-size: 35px;
+            margin-left: 2px;
+            color: white;
+            animation-name: hicon;
+            animation-timing-function: linear;
+            animation-duration: .8s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            cursor: pointer;
+        }
+
+        @keyframes hicon {
+            from {
+                transform: translateY(0px);
+            }
+
+            to {
+                transform: translateY(10px);
+            }
+        }
+
+        .s1 {
+            width: 100%;
+            height: 80vh;
+            background-color: rgb(236, 241, 247);
+            padding-top: .1px;
+
+        }
+
+        .s1-h1 {
+            text-align: center;
+            margin-top: 60px;
+            font-weight: 100;
+            font-size: 30px;
+
+        }
+
+        span {
+            color: rgb(0, 170, 255);
+        }
+
+        .s1-h2 {
+            font-size: 18px;
+            width: 800px;
+            text-align: center;
+            margin: auto;
+            margin-top: 40px;
+            color: gray;
+            line-height: 25px;
+        }
+
+        .s1-bold {
+            color: black;
+        }
+
+        .s1-h3 {
+            font-size: 18px;
+            width: 800px;
+            text-align: center;
+            margin: auto;
+            margin-top: 5px;
+            color: gray;
+        }
+
+        #s1-img {
+            border-radius: 20px;
+            margin-left: 50px;
+            margin-top: 30px;
+            cursor: pointer;
+
+        }
+
+        .s1-div {
+            height: 300px;
+            width: 500px;
+            margin: auto;
+            margin-top: 30px;
+            padding-top: .1px;
+        }
+
+        .s2 {
+            height: 140vh;
+            width: 100%;
+            background-color: rgb(255, 255, 255);
+        }
+
+        #s2-h1 {
+            text-align: center;
+            font-weight: 100;
+            margin-top: 70px;
+            font-size: 30px;
+        }
+
+        .s2-p1 {
+            font-size: 18px;
+            width: 700px;
+            text-align: center;
+            margin: auto;
+            margin-top: 40px;
+            font-size: 20px;
+            color: gray;
+            font-weight: 100;
+        }
+
+        .s2-p2 {
+            font-size: 18px;
+            width: 800px;
+            text-align: center;
+            margin: auto;
+            margin-top: 30px;
+            color: gray;
+            font-size: 19px;
+        }
+
+        .s2-div {
+            height: 600px;
+            width: 1050px;
+            margin: auto;
+            margin-top: 100px;
+        }
+
+        .s2-div1 {
+            height: 100px;
+            width: 100%;
+            background-color: rgb(237, 237, 237);
+            padding-top: .1px;
+        }
+
+        #s2-p3 {
+            font-weight: bold;
+            font-size: 19px;
+            margin-left: 20px;
+            margin-top: 40px;
+            color: rgb(81, 82, 84);
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        #s2-p4 {
+            font-weight: bold;
+            font-size: 19px;
+            margin-left: 20px;
+            margin-top: 40px;
+            color: rgb(81, 82, 84);
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 250px;
+        }
+
+        #s2-p5 {
+            font-weight: bold;
+            font-size: 19px;
+            margin-left: 20px;
+            margin-top: 30px;
+            color: rgb(81, 82, 84);
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 250px;
+            width: 150px;
+        }
+
+        .s3-div2 {
+            height: 80px;
+            width: 100%;
+            background-color: rgb(221, 235, 247);
+            border: solid rgb(213, 219, 225) .1px;
+
+        }
+
+        #s2-p6 {
+            font-size: 18px;
+            font-weight: bold;
+            margin-left: 20px;
+            margin-top: 25px;
+            color: rgb(81, 82, 84);
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        #s2-p7 {
+            font-size: 18px;
+            font-weight: bold;
+            margin-left: 260px;
+            margin-top: 25px;
+            color: rgb(81, 82, 84);
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .imgdot {
+            height: 40px;
+            width: 120px;
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 50px;
+            margin-top: 20px;
+
+        }
+
+        .dotimg {
+            margin-left: 20px;
+            margin-top: 15px;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .s2-p8 {
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 30px;
+            margin-left: 150px;
+        }
+
+        .s3-div3 {
+            height: 80px;
+            width: 100%;
+            background-color: white;
+            border: solid rgb(213, 219, 225) .1px;
+            margin-top: 20px;
+        }
+
+        #s2-p {
+            font-size: 19px;
+            margin-top: 25px;
+            margin-left: 20px;
+            color: gray;
+            display: inline-block;
+            vertical-align: top;
+
+
+        }
+
+        #s2-120 {
+            display: inline-block;
+            vertical-align: top;
+            font-size: 19px;
+            margin-left: 240px;
+            margin-top: 25px;
+            color: gray;
+        }
+
+        .dot7 {
+            margin-left: 20px;
+        }
+
+        .s2-710 {
+            display: inline-block;
+            vertical-align: top;
+            font-size: 19px;
+            margin-left: 150px;
+            margin-top: 25px;
+            color: gray;
+
+        }
+
+        #s2-525 {
+            display: inline-block;
+            vertical-align: top;
+            font-size: 19px;
+            margin-left: 235px;
+            margin-top: 25px;
+            color: gray;
+        }
+
+        .dot15 {
+            margin-left: 15px;
+        }
+
+        #s2-170 {
+            display: inline-block;
+            vertical-align: top;
+            font-size: 19px;
+            margin-left: 260px;
+            margin-top: 25px;
+            color: gray;
+        }
+
+        #s2-460 {
+            display: inline-block;
+            vertical-align: top;
+            font-size: 19px;
+            margin-left: 270px;
+            margin-top: 25px;
+            color: gray;
+        }
+
+        .s3 {
+            height: 80vh;
+            width: 100%;
+            background-image: url(./flaris_pg1img/2plan.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position-y: -150px;
+            padding-top: .1px;
+            border: solid black;
+        }
+
+        .s3-h1 {
+            color: white;
+            font-weight: 100;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .s3-p1 {
+            color: white;
+            width: 800px;
+            font-size: 18px;
+            font-weight: 100;
+            text-align: center;
+            margin: auto;
+            margin-top: 50px;
+            line-height: 25px;
+        }
+
+        .s3_btndiv {
+            width: 100%;
+            height: max-content;
+            margin: auto;
+            margin-top: -60px;
+            background-color: black;
+            padding-bottom: 50px;
+            padding-top: 50px;
+        }
+
+        .s3_innerdiv {
+            width: 25%;
+            height: max-content;
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 420px;
+        }
+
+        .s3_innerdiv:nth-child(2) {
+            margin-left: 60px;
+        }
+
+        #s3-h2 {
+            color: white;
+            text-align: center;
+
+        }
+
+        .s3-btn1 {
+            height: 50px;
+            width: 250px;
+            color: rgb(0, 170, 255);
+            background-color: black;
+            border: solid rgb(0, 170, 255) 1px;
+            margin-top: 40px;
+            margin-left: 60px;
+            font-size: 18px;
+            cursor: pointer;
+            transition-property: all;
+            transition-duration: .2s;
+            transition-timing-function: linear;
+
+
+        }
+
+        #s3icon {
+            font-size: 12px;
+            margin-left: 10px;
+            color: white;
+        }
+
+        .s3-btn1:hover {
+            background-color: rgb(0, 170, 255);
+            color: white;
+
+        }
+        .s4{
+            height: 70vh;
+            width: 100%;
+            background-color: rgb(30, 30, 30);
+            padding-top: .1px;
+
+            
+        }
+        .s4-h1{
+            font-weight: 100;
+            text-align: center;
+            color: white;
+            margin-top: 190px;
+            font-size: 28px;
+        }
+        .s4-btn1{
+            height: 55px;
+            width: 195px;
+            margin-left: 650px;
+            margin-top: 50px;
+            color: white;
+            background-color:rgb(30, 30, 30) ;
+            border:solid white 1px;
+            transition-property: all;
+            transition-duration: .2s;
+            transition-timing-function: linear;
+            font-size: 19px;
+            cursor: pointer;
+
+        }
+        #s4-icon{
+            margin-left: 10px;
+            font-size: 10px;
+            color: rgb(0, 170, 255);
+        }
+          .s4-btn1:hover{
+            background-color: white;
+            border: solid  rgb(0, 170, 255);
+            color: rgb(0, 170, 255);
+         }
+         .footer{
+            height: 65vh;
+            width: 100%;
+            background-color: rgb(0, 20, 44);
+            padding-top: .1px;
+         }
+         .f-boder{
+            height: 360px;
+            width:80% ;
+            border-bottom: solid rgb(6, 60, 116);
+            margin: auto;
+            margin-top: 50px;
+
+            
+         }
+         .f-div{
+            height: 100%;
+            width: 50%;
+            display: inline-block;
+            vertical-align: top;
+         }
+         .f-div2{
+            height: 100%;
+            width: 47%;
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 20px;
+         }
+         .subdiv1{
+            height: 300px;
+            width: max-content;
+            margin-top: 10px;
+            display: inline-block;
+            vertical-align: top;
+         }
+          .subdiv1:nth-child(2){
+            margin-left: 150px;
+          }
+           .subdiv1:nth-child(3){
+            margin-left: 130px;
+          }
+
+          .f-h1{
+            color: white;
+            font-size: 20px;
+            font-weight: 100;
+            margin-top: 30px;
+          }
+          .f-p1{
+            color: white;
+            font-size: 16px;
+            color: rgb(204, 204, 204);
+            margin-top: 40px;
+            font-weight: 100;
+            cursor: pointer;
+          }
+        .f-p1{
+            color: white;
+            font-size: 16px;
+            color: rgb(204, 204, 204);
+            margin-top: 20px;
+            font-weight: 100;
+            cursor: pointer;
+           
+        }
+        .flaris2{
+            height: 60px;
+            width: 240px;
+            margin-top: 0px;
+          
+
+        }
+        #f-logo{
+            width: 60%;
+
+        }
+        #f-h2{
+            color: white;
+            font-weight: 100;
+            font-size: 28px;
+            margin-left: 50px;
+            margin-top: 35px;
+          
+
+        }
+        #email{
+            height: 45px;
+            width: 450px;
+            border-radius: 10px;
+            margin-left: 50px;
+            margin-top: 30px;
+            cursor: pointer;
+            padding-left: 20px;
+            outline: none;
+            padding-right: 20px;
+            
+        }
+        .signup{
+           display: block;
+           width: 450px;
+           margin-left: 50px;
+           margin-top: 10px;
+           height: 45px;
+           border-radius: 10px;
+           background-color:  transparent;
+           color: white;
+           border:solid white 2px;
+           font-size: 19px;
+           transition-property: all;
+           transition-duration: .25s;
+           transition-timing-function: linear;
+           cursor: pointer;
+           
+        }
+        .signup:hover{
+            background-color: rgba(255, 255, 255, 0.312);
+            border: solid transparent;
+
+        }
+        #icon1{
+            font-size: 20px;
+            margin-left: 10px;
+            visibility: hidden;
+            transition-property: all;
+            transition-duration: .25s;
+            transition-timing-function: linear;
+            opacity: 0;
+            transform: translateX(-20px);
+            margin-top: 3px;
+
+        }
+        .signup:hover #icon1{
+            visibility: visible;
+            opacity: 1;
+            transform: translateX(0px);
+        }
+        .f-p2{
+            color: white;
+            font-size: 16px;
+            margin-left: 55px;
+            margin-top: 20px;
+        }
+        .f-div3{
+            height: 50px;
+            width: 100%;
+            border: solid red;
+        }
+        .btn-text{
+            transform: translateX(20px);
+            display: inline-block;
+            vertical-align: top;
+            transition-property: all;
+            transition-duration: .25s;
+            transition-timing-function: linear;
+
+
+        }
+        .signup:hover .btn-text{
+            transform: translateX(0px);
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <header class="header">
+            <div class="navbar">
+                <div class="logodiv">
+                    <img class="logo" src="./flaris_pg1img/logo.png" alt="">
+                </div>
+                <ul class="nav">
+                    <li class="navlist">AIRCRAFT</li>
+                    <li class="navlist">PILOTING COURSES</li>
+                    <li class="navlist">PURCHASE</li>
+                    <li class="navlist">NEWS</li>
+                    <li class="navlist">OUR STORY</li>
+                    <li class="navlist">PRESS ROOM</li>
+                    <li class="navlist">CONTACT</li>
+                </ul>
+                <div class="icondiv">
+                    <i id="navicon" class="fa-brands fa-facebook-f"></i>
+                    <i id="navicon" class="fa-brands fa-youtube"></i>
+                    <i id="navicon" class="fa-brands fa-instagram"></i>
+
+                </div>
+                <div class="flagdiv">
+                    <img src="./flaris_pg1img/iconPLflag-03.svg" alt="">
+                </div>
+            </div>
+            <h1 class="h-h1">› FLARIS ‹</h1>
+            <h1 class="h-h2">PERSONAL MOBILITY FOR THE 21ST CENTURY</h1>
+            <div class="h-icondiv">
+                <i id="h-icon" class="fa-solid fa-angle-down"></i>
+            </div>
+        </header>
+        <section class="s1">
+            <h1 class="s1-h1"><span>›</span> A BREAKTHROUGH IN AVIATION <span>‹</span></h1>
+            <p class="s1-h2">Flaris LAR 01 defines a new category of personal jet, <b class="s1-bold">being the only one
+                    able to take off from small grass airstrips </b>. It is easy to fly and offers a much more
+                affordable price and lower maintenance costs than other business aircraft.</p>
+            <p class="s1-h3">The affordable cost, low fuel consumption, and simple service procedures are all
+                contributing to the breakthrough of Flaris.</p>
+            <div class="s1-div">
+                <img id="s1-img" src="./flaris_pg1img/play.jpg" alt="">
+            </div>
+
+
+        </section>
+        <!-- ///////////////////////// s1 -->
+        <section class="s2">
+            <h1 id="s2-h1"> <span>›</span>SPECTACULARLY LOW VARIABLE COSTS <span>‹</span></h1>
+            <p class="s2-p1">Extensive flight testing confirmed the jet’s exceptionally low fuel consumption.
+                With four people on board, the cost of fuel is $0.14/nm per person. </p>
+            <p class="s2-p2">The operating cost is 450$/h including fuel, maintenance, replacement parts, and the engine
+                TAP BLUE program. A compact but comfortable cabin allows for a reduced aircraft mass which increases
+                overall flight economy and range.</p>
+            <div class="s2-div">
+                <div class="s2-div1">
+                    <p id="s2-p3">Aircraft type</p>
+                    <p id="s2-p4">Cost of 1 mile</p>
+                    <p id="s2-p5">Operating cost of one flight-hour</p>
+                </div>
+                <div class="s3-div2">
+                    <p id="s2-p6">Flaris LAR 01</p>
+                    <p id="s2-p7">1,20$</p>
+                    <div class="imgdot">
+                        <img class="dotimg" src="./flaris_pg1img/1.png" alt="">
+
+                    </div>
+                    <p class="s2-p8">450$</p>
+                    <div class="imgdot">
+                        <img class="dotimg" src="./flaris_pg1img/1.png" alt="">
+                    </div>
+
+
+                </div>
+                <div class="s3-div3">
+                    <p id="s2-p">Single-engine PJ</p>
+                    <p id="s2-120">2,15$</p>
+                    <div class="imgdot">
+                        <img class="dot7" src="./flaris_pg1img/7.png" alt="">
+                    </div>
+                    <p class="s2-710">710$</p>
+                    <div class="imgdot">
+                        <img class="dot7" src="./flaris_pg1img/7.png" alt="">
+                    </div>
+
+
+                </div>
+                <div class="s3-div3">
+                    <p id="s2-p">Twin-engine VLJ</p>
+                    <p id="s2-525">5,25$</p>
+                    <div class="imgdot">
+                        <img class="dot7" src="./flaris_pg1img/15.png" alt="">
+                    </div>
+                    <p class="s2-710">1100$</p>
+                    <div class="imgdot">
+                        <img class="dot15" src="./flaris_pg1img/15.png" alt="">
+                    </div>
+
+
+                </div>
+                <div class="s3-div3">
+                    <p id="s2-p">Single-engine</p>
+                    <p id="s2-170">1,70$</p>
+                    <div class="imgdot">
+                        <img class="dot7" src="./flaris_pg1img/7.png" alt="">
+                    </div>
+                    <p class="s2-710">520$</p>
+                    <div class="imgdot">
+                        <img class="dot7" src="./flaris_pg1img/5.png" alt="">
+                    </div>
+
+
+                </div>
+                <div class="s3-div3">
+                    <p id="s2-p">Twin-engine</p>
+                    <p id="s2-460">4,60$</p>
+                    <div class="imgdot">
+                        <img class="dot7" src="./flaris_pg1img/60-2.png" alt="">
+                    </div>
+                    <p class="s2-710">1250$</p>
+                    <div class="imgdot">
+                        <img class="dot15" src="./flaris_pg1img/15.png" alt="">
+                    </div>
+
+
+                </div>
+            </div>
+
+        </section>
+        <!-- //////////////////s2 -->
+        <section class="s3">
+            <h1 class="s3-h1"><span>›</span> FLARIS & LAR 01 <span>‹</span></h1>
+            <p class="s3-p1">The exceptional flight performance, economics, and ecology of LAR 01 meet the expectations
+                of modern aviation. In terms of design, it is a combination of remarkably low mass, cutting-edge engine,
+                and outstanding aerodynamics.</p>
+
+
+
+        </section>
+        <div class="s3_btndiv">
+            <div class="s3_innerdiv">
+                <h1 id="s3-h2">OWN A LAR 01</h1>
+                <button class="s3-btn1">Check the Offer
+                    <i id="s3icon" class="fa-solid fa-angle-right"></i>
+                </button>
+            </div>
+            <div class="s3_innerdiv">
+
+                <h1 id="s3-h2">BECOME A PILOT</h1>
+                <button class="s3-btn1">Piloting courses
+                    <i id="s3icon" class="fa-solid fa-angle-right"></i>
+                </button>
+            </div>
+        </div>
+        <!-- ///////////////////////s3 -->
+        <section class="s4">
+            <h1 class="s4-h1">› NEWS AND PRESS RELEASES ‹</h1>
+            <button class="s4-btn1">Read more
+                 <i id="s4-icon" class="fa-solid fa-angle-right"></i>
+            </button>
+        </section>
+        <!-- ////////////////s4 -->
+        <footer class="footer">
+            <div class="f-boder">
+                <div class="f-div">
+                    <div class="subdiv1">
+                        <h1 class="f-h1">Legal</h1>
+                        <p class="f-p1">GDPR</p>
+                        <p class="f-p1">Privacy policy</p>
+                        <p class="f-p1">Cookies</p>
+                    </div>
+                    <div class="subdiv1">
+                         <h1 class="f-h1">About</h1>
+                          <p class="f-p1">Press room</p>
+                        <p class="f-p1">Manufacturer</p>
+                    </div>
+                    <div class="subdiv1">
+                         <h1 class="f-h1">Informations</h1>
+                          <p class="f-p1">FAQ</p>
+                        <p class="f-p1">News</p>
+                    </div>
+                    <div class="flaris2">
+                        <img id="f-logo" src="./flaris_pg1img/white-flaris.png" alt="">
+                    </div>
+                </div>
+                 <div class="f-div2">
+                    <h1 id="f-h2">Sign up to our newsletter</h1>
+                    <input id="email" type="e-mail" placeholder="e-mail">
+                       <button class="signup">
+                        
+                        <p class="btn-text">Sign up</p>
+                        <i id="icon1" class="fa-solid fa-angle-right"></i>
+                        
+                       </button>
+                       <p class="f-p2">Form protected by reCAPTCHA and Google</p>
+
+
+                 </div>
+              
+            </div>
+            <div class="f-div3"></div>
+        </footer>
+    </main>
+</body>
+
+</html>
